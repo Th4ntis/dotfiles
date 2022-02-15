@@ -4,6 +4,8 @@ cp $HOME/.zshrc ./zsh/
 cp -R $HOME/.zsh ./zsh/
 cp $HOME/.tmux.conf ./tmux/
 cp -R $HOME/.tmux ./tmux/
+cp $HOME/.vimrc ./vim/
+cp -R $HOME/.vim ./vim/
 cp -R $HOME/.config/fusuma ./fusuma/
 git add --all
 git commit -m "Sync dotfile configs"
