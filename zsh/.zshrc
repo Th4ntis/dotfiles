@@ -110,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 #My Alias
 alias upd='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && flatpak update -y'
 alias nano='nano -l'
+alias ll='ls -al'
 alias clean='cat /dev/null > /home/$USER/.zsh_history && history -c && clear'
 alias bettercap-webui='sudo bettercap -caplet http-ui'
 
