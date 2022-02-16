@@ -77,7 +77,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(python pip git)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 alias upd='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && flatpak update -y'
 alias nano='nano -l'
 alias ll='ls -al'
-alias clean='cat /dev/null > /home/$USER/.zsh_history && history -c && clear'
+alias clean='cd && cat /dev/null > /home/$USER/.zsh_history && history -c && clear'
 alias bettercap-webui='sudo bettercap -caplet http-ui'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
