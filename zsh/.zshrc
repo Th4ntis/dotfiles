@@ -112,7 +112,6 @@ alias upd='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && f
 alias nano='nano -l'
 alias ll='ls -al'
 alias clean='cd && cat /dev/null > /home/$USER/.zsh_history && history -c && clear'
-alias bettercap-webui='sudo bettercap -caplet http-ui'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
