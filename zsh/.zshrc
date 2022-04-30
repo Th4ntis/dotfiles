@@ -109,15 +109,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Enables autoload completion
 autoload -U compinit; compinit
-fpath=(/opt/john/run $fpath)
 
 #My Alias
 alias upd='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && flatpak update -y'
 alias nano='nano -l'
 alias ll='ls -al'
 alias clean='cd && cat /dev/null > /home/$USER/.zsh_history && history -c && clear'
-alias thmvpn='sudo openvpn ~/Documents/thm.ovpn'
-alias sphtb='sudo openvpn ~/Documents/sp-htb.ovpn'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
