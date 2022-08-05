@@ -111,10 +111,19 @@ source $ZSH/oh-my-zsh.sh
 autoload -U compinit; compinit
 
 #My Alias
-alias upd='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && flatpak update -y'
-alias nano='nano -l'
-alias ll='ls -al'
-alias clean='cd && cat /dev/null > /home/$USER/.zsh_history && history -c && clear'
+alias upd='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && flatpak update -y' # self explanitory
+alias nano='nano -l' # runs nano showing numbered lines
+alias lll='ls -al' # ls showing all files
+alias ll='ls -lhN'
+alias clean='cd && cat /dev/null > /home/$USER/.zsh_history && history -c && clear' # clears ZSH history
+alias ..='cd ..' # go back one directory
+alias ...='cd ../..' # go back 2 directories
+alias ffs='sudo $(fc -l -n -1)'
+
+precmd() {
+    if [ "$?" != 0 ]
+    then (ffplay ~/Documents/Ringtones/MGS.mp3 -volume 20 -nodisp -autoexit >/dev/null 2>&1 &); fi
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
