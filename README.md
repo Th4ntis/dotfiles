@@ -12,8 +12,10 @@ Download the ttf files:
 for the [Power10k](https://github.com/romkatv/powerlevel10k) theme for Oh-My-ZSH.
 
 For my TMUX plugins I primarily use: TPM, tmux-battery, tmux-cpu, tmux-net-speed, and tmux-yank from [Tmux Plugins Github](https://github.com/tmux-plugins/)
-```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tmux-battery ~/.tmux/plugins/tmux-battery
 git clone https://github.com/tmux-plugins/tmux-cpu ~/.tmux/plugins/tmux-cpu
 git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/plugins/tmux-yank
-git clone https://github.com/tmux-plugins/tmux-net-speed ~/.tmux/plugins/tmux-net-speed```
+git clone https://github.com/tmux-plugins/tmux-net-speed ~/.tmux/plugins/tmux-net-speed
+```
