@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Custom Alias
-alias upd='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && flatpak update -y' # self explanitory
+alias upd='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y' # self explanitory
 alias nano='nano -l' # runs nano showing numbered lines
 alias lll='ls -al' # ls showing all files
 alias ll='ls -lhN'
