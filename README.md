@@ -1,5 +1,5 @@
 # dotfiles
-My dotfiles for ZSH(and [Oh-My-ZSH](https://ohmyz.sh/) themes and such), Vim, and Tmux. I have a backup for a file to import keyboard shortcuts for [Flameshot](https://flameshot.org/) into KDE as well.
+My dotfiles for ZSH(and [Oh-My-ZSH](https://ohmyz.sh/) themes and such), terminator, and Tmux. I have a backup for a file to import keyboard shortcuts for [Flameshot](https://flameshot.org/) into KDE as well.
 
 This uses fswatch to watch files for changes and automatically commit them there. Though this is disabled when I am testing of course. :P Always nice to have a backup.
 
