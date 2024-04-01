@@ -1,6 +1,13 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 #if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
 #  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 #fi
@@ -110,14 +117,18 @@ source $ZSH/oh-my-zsh.sh
 # Custom Alias
 alias upd='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y' # self explanitory
 alias nano='nano -l' # runs nano showing numbered lines
-alias lll='ls -al' # ls showing all files
-alias ll='ls -lhN'
+alias ls='ls --hyperlink=always' # ls with hyperlinks (ctrl+click)
+alias ll='ls -lhN --hyperlink=always' # ls long-list, human readable, literal with hyperlinks (ctrl+click)
+alias lll='ls -al --hyperlink=always' # ls all files, long-list with hyperlinks (ctrl+click)
 alias clean='cd && cat /dev/null > /home/$USER/.zsh_history && history -c && clear' # clears ZSH history
 alias ..='cd ..' # go back one directory
 alias ...='cd ../..' # go back 2 directories
-alias ffs='sudo $(fc -l -n -1)'
+alias ffs='sudo $(fc -l -n -1)' # re reruns last run command as sudo
+alias ls='ls --hyperlink=always' # ls with hyperlinks (ctrl+click)
 
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export GOPATH="$HOME/.go"
+export PATH="$PATH:${GOPATH//://bin:}/bin"
