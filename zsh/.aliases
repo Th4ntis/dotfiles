@@ -1,14 +1,10 @@
-alias _="sudo "
 alias upd='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y' # self explanitory
-alias ls='ls --hyperlink=always' # ls with hyperlinks (ctrl+click)
-alias ll='ls -lhN --hyperlink=always' # ls long-list, human readable, literal with hyperlinks (ctrl+click)
-alias lll='ls -al --hyperlink=always' # ls all files, long-list with hyperlinks (ctrl+click)
+alias ls='ls --hyperlink=always --color=auto' # ls with hyperlinks (ctrl+click)
+alias ll='ls -lhN --hyperlink=always --color=auto' # ls long-list, human readable, literal with hyperlinks (ctrl+click)
+alias lll='ls -al --hyperlink=always --color=auto' # ls all files, long-list with hyperlinks (ctrl+click)
 alias nano='nano -l' # runs nano showing numbered lines
 alias clean='cd && cat /dev/null > /home/$USER/.zsh_history && history -c && clear' # clears ZSH history
 alias ..='cd ..' # go back one directory
 alias ...='cd ../..' # go back 2 directories
 alias ....=../../.. # go back 3 directories
 alias ffs='sudo $(fc -l -n -1)' # runs last command as sudo
-alias cme='crackmapexec' # shorter version of CrackMapExec
-alias sf="sudo spiderfoot -l 0.0.0.0:8008" # opens Spiderfoot to listen on any IP over port 8008
-alias n4j="sudo neo4j console" # starts the neo4j console for Bloodhound
