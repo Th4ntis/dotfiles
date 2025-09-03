@@ -1,5 +1,4 @@
-alias _="sudo "
-alias upd='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y' # self explanitory
+alias upd='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y' # Updates repositories, upgrades packages, and removes unused packages
 alias ls='ls --hyperlink=always --color=auto' # ls with hyperlinks (ctrl+click)
 alias ll='ls -lhN --hyperlink=always --color=auto' # ls long-list, human readable, literal with hyperlinks (ctrl+click)
 alias lll='ls -al --hyperlink=always --color=auto' # ls all files, long-list with hyperlinks (ctrl+click)
@@ -9,9 +8,9 @@ alias ..='cd ..' # go back one directory
 alias ...='cd ../..' # go back 2 directories
 alias ....=../../.. # go back 3 directories
 alias ffs='sudo $(fc -l -n -1)' # runs last command as sudo
-alias nm='nmap' # shorten NMap
 alias curl='curl -A "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36" -k'
 alias dig='dig +short'
-alias http='sudo python3 -m http.server 80'
-alias myip='curl ifconfig.me/ip'
-alias ifconfig='ip -c --brief addr show'
+alias http='sudo python3 -m http.server 80' # Starts a quick http server in the current directory
+alias myip='curl ifconfig.me/ip' # shows my current external IP
+alias ifconfig='ip -c --brief addr show' # Pretty network information
+alias tmux='tmux attach -t main || tmux new -s main' # looks for a tmux session named 'main', and attaches, if it doesn't exist it makes one.
